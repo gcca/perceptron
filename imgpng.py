@@ -1,3 +1,5 @@
+import png
+
 class ImgPNG:
 	'''
 	Imagen PNG
