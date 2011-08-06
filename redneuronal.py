@@ -57,7 +57,12 @@ class RedNeuronal:
 				
 		'''
 		
-		pass
+		resultado = []
+
+		for patron in self.patrones:
+			resultado.append(patron.calcular(entradas))
+
+		return resultado
 
 	def patron(self, entradas):
 		'''
