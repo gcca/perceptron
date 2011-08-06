@@ -8,7 +8,9 @@ class ImgPNG:
 	
 	'''
 	def __init__(self, fichero = None):
-    pass
+		self.fichero = open(fichero)
+		self.png = png.Reader(file = self.fichero)
+		self.vector = []
 
 	def decodificar(self):
 		'''
