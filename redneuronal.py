@@ -78,7 +78,7 @@ class RedNeuronal:
 		
 		'''
 		
-		pass
+		return self.calcular(entradas).index(1)
 
 	def valor(self, entradas):
 		'''
