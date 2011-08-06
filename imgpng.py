@@ -1,3 +1,5 @@
+#!/gcca/bin/python
+
 import png
 
 class ImgPNG:

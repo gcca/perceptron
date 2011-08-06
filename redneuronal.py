@@ -113,5 +113,5 @@ class RedNeuronal:
 
 		'''
 
-    with open(fichero) as _fichero:
+		with open(fichero) as _fichero:
 			pass
