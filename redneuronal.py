@@ -13,7 +13,7 @@ class RedNeuronal:
 				
 	'''
 	def __init__(self, NPatrones, NEntradas):
-    pass
+		self.patrones = [Perceptron(NEntradas) for _ in xrange(NPatrones)
 
 	def entrenar(self, conjuntoEntrenamiento):
 		'''
@@ -59,7 +59,7 @@ class RedNeuronal:
 		
 		'''
 		
-    pass
+		pass
 
 	def valor(self, entradas):
 		'''
