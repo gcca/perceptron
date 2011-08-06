@@ -1,3 +1,5 @@
+#!/gcca/bin/python
+
 from numpy import *
 
 class Perceptron:
