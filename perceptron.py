@@ -64,4 +64,19 @@ class Perceptron:
 				
 		'''
 		
-    pass
+    while True:
+			entrenado = True
+      
+			for par in conjuntoEntrenamiento.items():
+				resultado = self.calcular(par[0])
+				error = par[1] - resultado
+        
+				if error != 0:
+					entrenado = False
+          
+					for i, v in enumerate(par[0]):
+						if v == 1:
+							self.pesos[i] += \
+								error * self.radioEntrenamiento
+			if entrenado:
+				break
