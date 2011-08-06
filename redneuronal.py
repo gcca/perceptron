@@ -27,7 +27,21 @@ class RedNeuronal:
 		
 		'''
 		
-		pass
+		if type(conjuntoEntrenamiento) is list or \
+			type(conjuntoEntrenamiento) is tuple:
+			for i in xrange(len(conjuntoEntrenamiento)):
+				resultado = [0] * len(conjuntoEntrenamiento)
+				resultado[i] = 1
+
+				self.patrones[i].entrenar(
+					dict(zip(conjuntoEntrenamiento, resultado)))
+		else:
+			for i in xrange(len(conjuntoEntrenamiento)):
+				resultado = [0] * len(conjuntoEntrenamiento)
+				resultado[i] = conjuntoEntrenamiento.values()[i]
+				
+				self.patrones[i].entrenar(
+					dict(zip(conjuntoEntrenamiento.keys(), resultado)))
 			
 	def calcular(self, entradas):
 		'''
