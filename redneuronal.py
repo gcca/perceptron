@@ -105,7 +105,7 @@ class RedNeuronal:
 
 	def cargar(self, fichero):
 		'''
-		Carga de pesos desde un fichero
+		Carga la Red Neuronal desde un fichero
 
 		:Parametros:
 			fichero: cadena
@@ -113,5 +113,20 @@ class RedNeuronal:
 
 		'''
 
-		with open(fichero) as _fichero:
-			pass
+		with open(fichero) as fichero:
+			for p in self.patrones:
+				p.pesos = pickle.load(fichero)
+
+	def guardar(self, fichero):
+		'''
+		Guarda la Red Neuronal a un fichero
+
+		:Parametros:
+			fichero: cadena
+				Nombre del fichero
+
+		'''
+
+		with open(fichero,'w') as fichero:
+			for p in self.patrones:
+				pickle.dump(p.pesos, fichero)

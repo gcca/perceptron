@@ -1,7 +1,5 @@
 #!/gcca/bin/python
 
-import pickle
-
 import redneuronal
 import imgpng
 
@@ -13,9 +11,7 @@ if __name__ == '__main__':
 
 	rn.entrenar(conjuntoEntrenamiento)
 
-	with open('pesos','wt') as fichero:
-		for p in rn.patrones:
-			pickle.dump(p.pesos, fichero)
+	rn.guardar('redneuronal')
 
 	for i in xrange(10):
 		nombrePNG = str(i) + '.png'
