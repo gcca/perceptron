@@ -1,3 +1,7 @@
+#!/gcca/bin/python
+
+import pickle
+
 import perceptron
 
 class RedNeuronal:
@@ -96,5 +100,18 @@ class RedNeuronal:
 				1 si activado
 		
 		'''
-		
+
 		return 1 if 1 in self.calcular(entradas) else 0
+
+	def cargar(self, fichero):
+		'''
+		Carga de pesos desde un fichero
+
+		:Parametros:
+			fichero: cadena
+				Nombre del fichero
+
+		'''
+
+    with open(fichero) as _fichero:
+			pass
