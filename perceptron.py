@@ -35,7 +35,7 @@ class Perceptron:
 
 		'''
 
-		pass
+    return sum(self.pesos * entradas)
 
 	def calcular(self, entradas):
 		'''
@@ -51,8 +51,8 @@ class Perceptron:
 				1 si activado
 				
 		'''
-		
-		pass
+
+    pass
 
 	def entrenar(self, conjuntoEntrenamiento):
 		'''
