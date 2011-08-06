@@ -95,4 +95,4 @@ class RedNeuronal:
 		
 		'''
 		
-		pass
+		return 1 if 1 in self.calcular(entradas) else 0
