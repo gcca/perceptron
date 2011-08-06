@@ -17,10 +17,10 @@ class Perceptron:
 				
 	'''
 	def __init__(self, NEntradas):
-    self.pesos = array([.0]*NEntradas) 
+		self.pesos = array([.0]*NEntradas) 
 		self.umbral = 0.5
 		self.radioEntrenamiento = 0.1
-  
+	
 	def suma(self, entradas):
 		'''
 		Suma de las entradas ponderadas por los pesos
@@ -35,7 +35,7 @@ class Perceptron:
 
 		'''
 
-    return sum(self.pesos * entradas)
+		return sum(self.pesos * entradas)
 
 	def calcular(self, entradas):
 		'''
@@ -52,7 +52,7 @@ class Perceptron:
 				
 		'''
 
-    return 1 if self.suma(entradas) > self.umbral else 0
+		return 1 if self.suma(entradas) > self.umbral else 0
 
 	def entrenar(self, conjuntoEntrenamiento):
 		'''
@@ -64,16 +64,16 @@ class Perceptron:
 				
 		'''
 		
-    while True:
+		while True:
 			entrenado = True
-      
+			
 			for par in conjuntoEntrenamiento.items():
 				resultado = self.calcular(par[0])
 				error = par[1] - resultado
-        
+				
 				if error != 0:
 					entrenado = False
-          
+					
 					for i, v in enumerate(par[0]):
 						if v == 1:
 							self.pesos[i] += \
