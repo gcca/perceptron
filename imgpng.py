@@ -29,4 +29,4 @@ class ImgPNG:
 					self.vector.append(0 if self.imgBin[10+20*i][40+4*20*j] else 1)
 			self.fichero.close()
 			
-		return self.vector
+		return tuple(self.vector)

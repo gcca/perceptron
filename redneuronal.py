@@ -1,3 +1,5 @@
+import perceptron
+
 class RedNeuronal:
 	'''
 	Red Neuronal :Perceptron
@@ -13,7 +15,7 @@ class RedNeuronal:
 				
 	'''
 	def __init__(self, NPatrones, NEntradas):
-		self.patrones = [Perceptron(NEntradas) for _ in xrange(NPatrones)
+		self.patrones = [perceptron.Perceptron(NEntradas) for _ in xrange(NPatrones)]
 
 	def entrenar(self, conjuntoEntrenamiento):
 		'''
@@ -28,7 +30,7 @@ class RedNeuronal:
 		'''
 		
 		if type(conjuntoEntrenamiento) is list or \
-			type(conjuntoEntrenamiento) is tuple:
+			 type(conjuntoEntrenamiento) is tuple:
 			for i in xrange(len(conjuntoEntrenamiento)):
 				resultado = [0] * len(conjuntoEntrenamiento)
 				resultado[i] = 1
