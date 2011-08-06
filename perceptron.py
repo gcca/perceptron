@@ -52,7 +52,7 @@ class Perceptron:
 				
 		'''
 
-    pass
+    return 1 if self.suma(entradas) > self.umbral else 0
 
 	def entrenar(self, conjuntoEntrenamiento):
 		'''
