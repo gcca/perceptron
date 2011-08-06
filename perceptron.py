@@ -1,3 +1,5 @@
+from numpy import *
+
 class Perceptron:
 	'''
 	Neurona :Perceptron
@@ -15,7 +17,9 @@ class Perceptron:
 				
 	'''
 	def __init__(self, NEntradas):
-      pass
+    self.pesos = array([.0]*NEntradas) 
+		self.umbral = 0.5
+		self.radioEntrenamiento = 0.1
   
 	def suma(self, entradas):
 		'''
