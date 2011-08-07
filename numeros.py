@@ -10,8 +10,8 @@ if __name__ == '__main__':
 
 	rn.cargar('redneuronal')
 
-  try:
-  	print nombrePNG, '->',	rn.patron(imgpng.ImgPNG(sys.argv[1]).decodificar())
+	try:
+		print sys.argv[1], '->',	rn.patron(imgpng.ImgPNG(sys.argv[1]).decodificar())
 
 	except:
 		for i in xrange(10):
