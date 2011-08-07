@@ -18,8 +18,10 @@ class RedNeuronal:
 				...
 				
 	'''
-	def __init__(self, NPatrones, NEntradas):
-		self.patrones = [perceptron.Perceptron(NEntradas) for _ in xrange(NPatrones)]
+	def __init__(self, NPatrones = None, NEntradas = None):
+		self.patrones = \
+			[perceptron.Perceptron(NEntradas) for _ in xrange(NPatrones)] \
+				if NPatrones else []
 
 	def entrenar(self, conjuntoEntrenamiento):
 		'''
@@ -114,8 +116,16 @@ class RedNeuronal:
 		'''
 
 		with open(fichero) as fichero:
-			for p in self.patrones:
-				p.pesos = pickle.load(fichero)
+			while True:
+				try:
+					pesos = pickle.load(fichero)
+					NEntradas = len(pesos)
+					patron = perceptron.Perceptron(NEntradas)
+					patron.pesos = pesos
+
+					self.patrones.append(patron)
+				except EOFError:
+					break
 
 	def guardar(self, fichero):
 		'''

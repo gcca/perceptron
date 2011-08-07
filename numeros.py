@@ -4,7 +4,7 @@ import redneuronal
 import imgpng
 
 if __name__ == '__main__':
-	rn = redneuronal.RedNeuronal(10, 35)
+	rn = redneuronal.RedNeuronal()
 
 	rn.cargar('redneuronal')
 
